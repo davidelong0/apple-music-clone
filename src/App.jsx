@@ -7,14 +7,13 @@ import ExploreMore from './components/ExploreMore';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DesktopNavbar from './components/DesktopNavbar';
+import MobileNavbar from './components/MobileNavbar'; 
 import './App.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
 
 function App() {
   const [artistQuery, setArtistQuery] = useState('queen'); 
 
-  
   const handleSearch = (query) => {
     setArtistQuery(query);
   };
@@ -22,6 +21,7 @@ function App() {
   return (
     <div className="bg-black text-white min-vh-100">
       <DesktopNavbar /> 
+      <MobileNavbar /> 
       <div className="container-fluid">
         <div className="row">
           <div className="col-12 col-md-2 px-0">
