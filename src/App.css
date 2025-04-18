@@ -1,42 +1,188 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;    
+  overflow-x: hidden;        
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;             
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.text-container {
+  word-wrap: break-word;     
+  white-space: normal;      
+  overflow-wrap: break-word;
+  width: 100%;               
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.music-card {
+  background-color: #000 !important; 
+  border: none;
 }
 
-.card {
-  padding: 2em;
+.music-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
-.read-the-docs {
+.song-title {
+  font-size: 0.9rem;
+  color: #dcdcdc;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist-name {
+  font-size: 0.8rem;
+  color: #a8a8a8;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+::placeholder {
+  color: #ccc !important;
+  opacity: 1;
+}
+
+.search-icon:hover {
+  cursor: pointer;
+  color: #ff6f61; 
+  transform: translateY(-50%) scale(1.2); 
+  transition: transform 0.2s ease, color 0.2s ease; 
+}
+
+/* ExploreMore.css */
+.explore-item {
+  background-color: #343a40;
+  border-radius: 10px;
+  color: red;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex-wrap: nowrap; 
+}
+
+.explore-text {
+  text-align: left; 
+  flex: 1;
+}
+
+.explore-symbol {
+  color: red;
+  font-size: 1.25rem;
+  margin-left: 10px;
+}
+
+.text-light-grey {
+  color: #d3d3d3; 
+}
+
+.custom-margin {
+  margin-bottom: 1rem!important;
+}
+
+
+.arrow {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.track-card {
+  background-color: black;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.track-img {
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+}
+
+.track-info {
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.track-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.track-title {
+  font-size: 0.8rem;
+  color: #d3d3d3;
+  margin: 0.3rem 0 0 0.3rem;
+  font-weight: bold;
+}
+
+.track-ep {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #888;
+  border-radius: 0.2rem;
+  padding: 0.1rem 0.3rem;
+  margin-left: 0.5rem;
+}
+
+.track-artist {
+  font-size: 0.75rem;
   color: #888;
+  margin: 0 0 0.5rem 0.3rem;
 }
+
+.desktop-navbar {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: #333;
+}
+
+.desktop-navbar .player-controls i,
+.desktop-navbar .bi-volume-up-fill {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;  /* Imposta un colore per le icone */
+}
+
+.desktop-navbar .player-controls i:hover,
+.desktop-navbar .bi-volume-up-fill:hover {
+  opacity: 0.8;
+}
+
+.desktop-navbar .logo-container {
+  background-color: #3a3a3a;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desktop-navbar .btn-danger {
+  font-weight: bold;
+}
+
